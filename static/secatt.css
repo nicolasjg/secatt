@@ -1,0 +1,103 @@
+.navbar {
+    border-radius: 0px;
+	margin-bottom: 0px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-family:Oswald;
+}
+
+.navbar-brand:hover{
+    background:#ffffff;
+}
+
+.navbar-brand:hover path{
+    fill:#ffffff;
+}
+
+.input-group {
+	padding-bottom:4px;
+}
+
+.titulo-seccion {
+	font-weight: bold;
+}
+
+.panel-heading {
+    display:flex;
+    vertical-align:middle;
+}
+
+.panel-heading:hover {
+	background: #E0E0E0;
+}
+
+.pull-right > svg {
+    margin:3px;
+    margin-top:5px;
+}
+
+.panel-title {
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.pull-right {
+    margin: -6px;
+    width: 55px;
+    height: 25px;
+}
+
+.panel-body {
+    margin-left: 15px;
+}
+
+.badgeContainer {
+    float:right;
+}
+
+.badge {
+    height:18px;   
+    margin-left:3px;
+}
+
+.img-responsive {
+    max-height: 100%;
+}
+
+.jumbotron{
+    height: 100vh;
+}
+
+.vertical_center {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+  background: url(img/secatt.svg);
+   background-repeat: repeat-x;
+  background-size: 100px 82px;
+}
+
+.divBusq{
+	height: 100vh;
+}
+
+.divContact{
+	height: 100vh;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+*[id]:before { 
+  display: block; 
+  content: " "; 
+  margin-top: -75px; 
+  height: 75px; 
+  visibility: hidden; 
+}

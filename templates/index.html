@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>SecAtt 2.0</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="static/secatt.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="static/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="static/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="static/manifest.json">
+  <link rel="mask-icon" href="static/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="apple-mobile-web-app-title" content="SecAtt 2.0">
+  <meta name="application-name" content="SecAtt 2.0">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse  navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                
+      </button>
+
+      <a class="navbar-brand" href="#" >
+        <svg height="35" width="80" viewBox="50 -5 10 60">
+        <g transform="translate(-399.64 -178.93)">
+        <path id="svg-heading" fill="#9d9d9d" d="m449.18 226.74c-6.79-4.37-7.02-8.98-0.38-7.74 3.57 0.66 7.24 0.73 14.13 0.25 2.86-0.19 3.55 0.13 3.79 1.80 0.35 2.49-7.38 8.45-10.9 8.43-1.28-0.01-4.24-1.24-6.58-2.75zm-24.51-22.27c-12.25-2.06-23.89-12.33-24.97-22.05-0.23-2.10 0.27-2.40 5.17-3.13 10.27-1.52 22.35 2.37 28.29 9.13 3.30 3.76 7.75 12.54 7.76 15.34 0.01 1.47-0.88 1.73-5.74 1.63-3.16-0.06-7.89-0.47-10.51-0.91zm42.27-0.56c0.01-2.92 4.38-11.63 7.76-15.49 5.81-6.61 17.45-10.48 27.86-9.26 2.97 0.35 5.62 0.97 5.87 1.38 0.69 1.12-1.55 7.01-4.22 11.08-2.86 4.36-9.66 9.40-15.43 11.44-2.33 0.82-8.20 1.77-13.0 2.12-8.20 0.58-8.80 0.49-8.79-1.27z"></path>
+        </g>
+        </svg>
+        SECATT</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a class="page-scroll" href="#jumbotron">Home</a></li>
+        <li><a class="page-scroll" href="#busqueda">Buscar</a></li>        
+		<li><a class="page-scroll" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ 
+<div id="jumbotron" class="jumbotron vertical_center">
+	<div class="logo"></div>
+	<div class="container input col-md-8 col-md-offset-2">	
+		<h2>Secatt | Índice de consulta de Patrones online</h2>
+		<p>Identifique patrones de seguridad y ataque candidatos a su aplicacion, que guien la solucion de las vulnerabilidades que describen</p>
+	</div>
+ </div>
+<div id="busqueda" class="container divBusq">
+	<h1 style="padding-top: 40px; margin-top: -40px;">Buscador de palabras claves</h1>
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button title="Como usar" data-toggle="collapse" data-parent="#accordion" href="#collapse0" class="btn btn-default" type="button">
+          <span class="glyphicon glyphicon-info-sign"></span>
+        </button>
+      </span>
+        <input name="q"  id="query" type="text" class="form-control" placeholder="Search for a pattern" value="">
+      <span class="input-group-btn">
+        <button id="searchButton" type="button" class="btn btn-default">Buscar</button>
+      </span>
+    </div><!-- /input-group -->
+    <div id="collapse0" class="panel-collapse collapse">
+              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        </div>
+  <div id="results">
+      <div id="results-attack" class="col-sm-6">
+		<h4 id="title-attack" class="titulo-seccion"> Attack Patterns</h4>
+        <div class="panel-group" id="panel-attack">
+	    </div>
+	  </div>
+      <div id="results-security" class="col-sm-6">
+        <h4 id="title-security" class="titulo-seccion"> Security Patterns</h4>
+        <div class="panel-group" id="panel-security">
+        </div>
+      </div>   
+  </div>        
+</div>    
+<div id="contacto" class="container divContact">
+	<div id="inner" align="center" class="col-md-12">
+<form id="contact_form" action="mailto:hola@secatt.com" method="POST" enctype="multipart/form-data">
+<h1> Contactanos a hola@secatt.com </h1>
+	<div class="row">
+		<label for="name">Nombre:</label><br />
+		<input id="name" class="input col-md-6 col-md-offset-3" name="name" type="text" value="" size="30" /><br />
+	</div>
+	<div class="row">
+		<label for="email">Email:</label><br />
+		<input id="email" class="input col-md-6 col-md-offset-3 name="email" type="text" value="" size="30" /><br />
+	</div>
+	<div class="row">
+		<label for="message">Mensaje:</label><br />
+		<textarea id="message" class="input col-md-6 col-md-offset-3" name="message" rows="7" cols="30"></textarea><br />
+	</div>
+	<input id="submit_button" type="submit" value="Send email" />
+</form>
+	</div>
+</div>
+
+<script>
+$(document).ready(function(){
+	$('.page-scroll a').bind('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: ($($anchor.attr('href')).offset().top - 50)
+        }, 1250, 'easeInOutExpo');
+        event.preventDefault();
+    });
+});
+
+$("#results").hide();
+var abstract = '"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."';
+var $flagPatterns;
+var $scoreMax;
+var $attackLength;
+var $securityLength;
+
+$("#title-attack").append(
+    jQuery('<span/>',{'id':'badge-attack','class':'badge'}).hide());
+$("#title-security").append(
+    jQuery('<span/>',{'id':'badge-security','class':'badge'}).hide());
+
+function loadPatterns($msg){
+	$flagPatterns = 0;
+	var $obj = JSON.parse($msg);
+	if($obj.attack.length == 0){
+	    $('#panel-attack').html("<h5>No se encontraron coincidencias</h5>");
+        $("#badge-attack").fadeOut(150);
+	}
+	else{
+        $attackLength=($obj.attack.length);
+        $("#badge-attack").html($attackLength).show();
+        $scoreMax = $obj.attack[0].score.toFixed(2);
+        jQuery.each( $obj.attack, function( i, val ) {
+		    createPatternSnippet("attack",val);
+            
+	    });
+        $('#panel-attack').fadeIn(150);
+	}
+	if($obj.security.length == 0){
+	    $('#panel-security').html("<h5>No se encontraron coincidencias</h5>");
+        $("#badge-security").fadeOut(150);
+	}
+	else{
+        $securityLength=($obj.security.length);
+        $("#badge-security").html($securityLength).show();
+        $scoreMax = $obj.security[0].score.toFixed(2);
+	   jQuery.each( $obj.security, function( i, val ) {
+		  createPatternSnippet("security",val);
+	   });
+        $('#panel-security').fadeIn(150);
+	}
+}
+
+function createPatternSnippet($type, $pattern){
+	$flagPatterns++;
+	var $patternTitle = jQuery('<h4/>', {
+      'class':'panel-title pull-left'
+      })
+      .html($pattern.title);
+      
+  var $patternHeading = jQuery('<div/>',{
+      'class':'panel-heading clearfix ' + $type,
+      'data-toggle':'collapse',
+      'data-parent':'#accordion-'+$flagPatterns,
+      'href':'#collapse'+$flagPatterns
+      })
+      .html($patternTitle);
+    
+  var $patternFooter = jQuery('<div/>',{class:'panel-footer'})
+  .append(jQuery('<h5/>').html("Reference"))
+  .append(jQuery('<h6/>').html($pattern.reference));
+  
+  if ($type == "attack")
+	 	$patternFooter.wrapInner(jQuery('<a/>',{
+      'href':$pattern.reference,
+      'target':'_blank'
+    }));  
+    
+  var $patternBody = jQuery('<div/>',{
+    'id':'collapse'+$flagPatterns,
+    'class':'panel-collapse collapse'
+    }).append(jQuery('<div/>',{'class':'panel-body'}).text($pattern.overview))
+    	.append($patternFooter);
+  
+	var $finalSnippet = jQuery('<div/>',{
+	  'class': 'panel panel-default',
+	  'id': '#accordion-'+ $flagPatterns})
+	 .append($patternHeading)
+	 .append($patternBody)
+	
+	var $normalScore = $pattern.score.toFixed(2)/$scoreMax;
+	$patternHeading.append('<span class="pull-right">'
+	  +'<svg height="25" width="60" viewBox="50 0 5 65"><g transform="translate(-399.64 -178.93)">'
+        +'<path fill=rgba(25,87,137,' + $normalScore + ') d="m449.18 226.74c-6.79-4.37-7.02-8.98-0.38-7.74 3.57 0.66 7.24 0.73 14.13 0.25 2.86-0.19 3.55 0.13 3.79 1.80 0.35 2.49-7.38 8.45-10.9 8.43-1.28-0.01-4.24-1.24-6.58-2.75zm-24.51-22.27c-12.25-2.06-23.89-12.33-24.97-22.05-0.23-2.10 0.27-2.40 5.17-3.13 10.27-1.52 22.35 2.37 28.29 9.13 3.30 3.76 7.75 12.54 7.76 15.34 0.01 1.47-0.88 1.73-5.74 1.63-3.16-0.06-7.89-0.47-10.51-0.91zm42.27-0.56c0.01-2.92 4.38-11.63 7.76-15.49 5.81-6.61 17.45-10.48 27.86-9.26 2.97 0.35 5.62 0.97 5.87 1.38 0.69 1.12-1.55 7.01-4.22 11.08-2.86 4.36-9.66 9.40-15.43 11.44-2.33 0.82-8.20 1.77-13.0 2.12-8.20 0.58-8.80 0.49-8.79-1.27z"/></g></svg>'
+                +'</span></div>');
+	$('#panel-'+$type).append($finalSnippet);
+}
+
+var delay = (function(){
+  var timer = 0;
+  return function(callback, ms){
+    clearTimeout (timer);
+    timer = setTimeout(callback, ms);
+  };
+})();
+
+var $sendAjax = function(){
+    if(!$("#query").val().trim()){
+        $("#results").fadeOut(150);
+        return;
+    }
+    $("#results").show();
+    $.ajax({
+        type: "GET",
+        url: "/api",
+        data: {'search':$("#query").val()},
+        dataType: "text"
+    }).done(function(data){
+        loadPatterns(data); 
+    });
+   }
+$("#query").keyup(function(){
+    $("#badge-security").fadeOut(150);
+    $("#badge-attack").fadeOut(150);
+    $('#panel-attack').fadeOut(150, function() {$(this).empty();});
+    $('#panel-security').fadeOut(150, function() {$(this).empty();});
+    delay(function(){$sendAjax();}, 500);});
+$("#searchButton").click(function(){
+    $("#query").keyup();
+});
+
+function scrollToAnchor(aid){
+    var aTag = $("a[name='"+ aid +"']");
+    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+}
+
+$("#anchorBusqueda").click(function() {
+   scrollToAnchor('busqueda');
+   });
+</script>
+
+</body>
+
+</html>
+
